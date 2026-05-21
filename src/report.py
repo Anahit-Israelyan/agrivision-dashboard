@@ -1,5 +1,5 @@
 """
-report.py — AgriVision Decision Support System
+report.py — CropSense Decision Support System
 ==============================================
 Handles PDF Analytics Generation.
 """
@@ -8,11 +8,11 @@ from fpdf import FPDF
 from datetime import datetime
 import os
 
-class AgriVisionReport(FPDF):
+class CropSenseReport(FPDF):
     def header(self):
         self.set_font('Arial', 'B', 15)
         self.set_text_color(42, 157, 143) # Teal
-        self.cell(0, 10, 'AgriVision DSS - Biomass & Yield Analysis', 0, 1, 'L')
+        self.cell(0, 10, 'CropSense DSS - Biomass & Yield Analysis', 0, 1, 'L')
         self.set_font('Arial', 'I', 10)
         self.set_text_color(150, 150, 150)
         self.cell(0, 10, f'Generated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}', 0, 1, 'L')
@@ -41,7 +41,7 @@ def generate_pdf_report(
     Returns the raw bytes of the PDF.
     """
     
-    pdf = AgriVisionReport()
+    pdf = CropSenseReport()
     pdf.add_page()
     
     # 1. Executive Summary

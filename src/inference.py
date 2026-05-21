@@ -1,5 +1,5 @@
 """
-inference.py — AgriVision Decision Support System
+inference.py — CropSense Decision Support System
 =================================================
 Memory-optimized YOLOv8 inference wrapper designed for deployment on
 CPU-bound environments (e.g. Intel i3 with 8GB RAM).

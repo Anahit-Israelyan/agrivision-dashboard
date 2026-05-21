@@ -1,5 +1,5 @@
 # ============================================================
-# AgriVision Decision Support System — Pinned Dependencies
+# CropSense Decision Support System — Pinned Dependencies
 # ============================================================
 
 # Core ML & Vision

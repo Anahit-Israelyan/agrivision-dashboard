@@ -1,5 +1,5 @@
 """
-config.py — AgriVision Decision Support System
+config.py — CropSense Decision Support System
 ================================================
 Global configuration module. Contains strictly encapsulated agronomic
 constants used for yield estimation calculations.

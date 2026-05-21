@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 from PIL import Image
 
-# AgriVision Backend Modules
+# CropSense Backend Modules
 from src.config import REGIONAL_DEFAULTS, SUPPORTED_REGIONS
 from src.analytics import FieldAnalytics
 from src.inference import get_model, run_inference
@@ -12,7 +12,7 @@ from src.report import generate_pdf_report
 # Page Configuration
 # ---------------------------------------------------------------------------
 st.set_page_config(
-    page_title="AgriVision Platform",
+    page_title="CropSense Platform",
     page_icon="🌾",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -38,7 +38,7 @@ if "counts" not in st.session_state:
 # Model Caching
 # ---------------------------------------------------------------------------
 @st.cache_resource(show_spinner="Warming up neural engine...")
-def load_agrivision_model():
+def load_CropSense_model():
     return get_model("iteration_2_tuned.pt")
 
 
@@ -93,7 +93,7 @@ st.markdown("""
 <div class="hero-banner">
     <div class="hero-icon">🌾</div>
     <div class="hero-text-container">
-        <h1 class="hero-title">AgriVision Platform</h1>
+        <h1 class="hero-title">CropSense Platform</h1>
         <p class="hero-subtitle">High-Accuracy Wheat Head Detection Engine</p>
     </div>
 </div>
@@ -106,7 +106,7 @@ stat_placeholder = st.container()
 # EXECUTION LOOP
 # ---------------------------------------------------------------------------
 if trigger_run and uploaded_files:
-    model = load_agrivision_model()
+    model = load_CropSense_model()
     counts = []
     
     with st.spinner("Processing spatial data through neural network..."):
@@ -186,7 +186,7 @@ if st.session_state.counts:
         st.download_button(
             label="📄 Export Briefing",
             data=pdf_bytes,
-            file_name="AgriVision_Briefing.pdf",
+            file_name="CropSense_Briefing.pdf",
             mime="application/pdf",
             type="primary",
             use_container_width=True

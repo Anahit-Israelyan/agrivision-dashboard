@@ -1,4 +1,4 @@
-# AgriVision Decision Support System
+# CropSense Decision Support System
 ### High-Precision Computer Vision for Agronomic Intelligence
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -16,15 +16,15 @@
 
 | Resource | Description | Action |
 | :--- | :--- | :--- |
-| **Production Inference Engine** | Live YOLOv8 pipeline hosted on Hugging Face Space. | [**Run Live Demo**](https://huggingface.co/spaces/Anahit-Israelyan/AgriVision-Engine) |
-| **Research Foundations** | Comprehensive study and model breakdown. | [**Read Research Paper**](https://github.com/Anahit-Israelyan/agrivision-dashboard/blob/main/AgriVision_Paper/AgriVision_CVPR_Draft.pdf) |
+| **Production Inference Engine** | Live YOLOv8 pipeline hosted on Hugging Face Space. | [**Run Live Demo**](https://huggingface.co/spaces/Anahit-Israelyan/CropSense-Engine) |
+| **Research Foundations** | Comprehensive study and model breakdown. | [**Read Research Paper**](https://github.com/Anahit-Israelyan/CropSense-dashboard/blob/main/CropSense_Paper/CropSense_CVPR_Draft.pdf) |
 
 ---
 
 ## 📸 Visual Preview
 
 <p align="center">
-  <img src="docs/assets/dashboard_preview.png" width="900" alt="AgriVision analytics dashboard in Emerald UI">
+  <img src="docs/assets/dashboard_preview.png" width="900" alt="CropSense analytics dashboard in Emerald UI">
 </p>
 <p align="center"><em>Real-time wheat head detection & automated agronomic analytics (Yield estimation, Spatial Uniformity, and Revenue projection)</em></p>
 
@@ -32,9 +32,9 @@
 
 ## Executive Summary
 
-The AgriVision Decision Support System introduces a modern, automated computer vision approach to agricultural monitoring, moving away from slow and error-prone manual crop assessments. By analyzing high-resolution aerial imagery taken by drones, this project utilizes a custom-trained YOLOv8 neural network to accurately identify and count wheat heads across diverse field conditions. This provides farmers with precise, actionable data at a scale that human inspection simply cannot match.
+The CropSense Decision Support System introduces a modern, automated computer vision approach to agricultural monitoring, moving away from slow and error-prone manual crop assessments. By analyzing high-resolution aerial imagery taken by drones, this project utilizes a custom-trained YOLOv8 neural network to accurately identify and count wheat heads across diverse field conditions. This provides farmers with precise, actionable data at a scale that human inspection simply cannot match.
 
-Beyond basic object detection, AgriVision translates visual data into concrete business intelligence. The system aggregates the detected wheat heads and combines them with localized agronomic variables (like Thousand Grain Weight) to estimate total crop yield, evaluate field uniformity, and project potential revenue. These insights are instantly compiled into a comprehensive PDF report, giving farm managers the data they need to make informed decisions rapidly.
+Beyond basic object detection, CropSense translates visual data into concrete business intelligence. The system aggregates the detected wheat heads and combines them with localized agronomic variables (like Thousand Grain Weight) to estimate total crop yield, evaluate field uniformity, and project potential revenue. These insights are instantly compiled into a comprehensive PDF report, giving farm managers the data they need to make informed decisions rapidly.
 
 ## System Architecture & Problem Domain
 
@@ -42,7 +42,7 @@ Beyond basic object detection, AgriVision translates visual data into concrete b
 Modern agriculture still relies heavily on manual sampling to estimate yields and detect crop stress. This process is incredibly slow, difficult to scale, and statistically unreliable due to human error and dense field growth. Without accurate, large-scale spatial data, farm operators are forced to make macro-level decisions based on micro-level observations, leading to inaccurate harvest forecasts and missed opportunities to correct localized crop issues.
 
 ### The Solution
-AgriVision solves this by automating the data collection and analysis pipeline. Built upon the robust Global Wheat Dataset, our fine-tuned YOLOv8 model is capable of identifying wheat traits under various lighting conditions and overlapping canopies.
+CropSense solves this by automating the data collection and analysis pipeline. Built upon the robust Global Wheat Dataset, our fine-tuned YOLOv8 model is capable of identifying wheat traits under various lighting conditions and overlapping canopies.
 
 The pipeline operates in the following stages:
 1. **Data Intake**: High-resolution drone imagery is uploaded into the dashboard.
@@ -56,7 +56,7 @@ The pipeline operates in the following stages:
 ## 🏗️ Project Structure
 
 ```
-agrivision-dashboard/
+CropSense-dashboard/
 ├── app.py                          # Streamlit dashboard application
 ├── style.css                       # Emerald Glassmorphism UI stylesheet
 ├── requirements.txt                # Python dependencies
@@ -80,7 +80,7 @@ agrivision-dashboard/
 ├── data/                           # Local datasets (gitignored)
 ├── tests/                          # Unit testing suite
 ├── outputs/                        # Model weights & logs (gitignored)
-├── AgriVision_Paper/               # Research paper drafts
+├── CropSense_Paper/               # Research paper drafts
 └── LICENSE                         # MIT License
 ```
 
@@ -88,7 +88,7 @@ agrivision-dashboard/
 
 ## Agronomic Analytics Engine
 
-The core value of AgriVision is its ability to turn pictures into actionable farming metrics.
+The core value of CropSense is its ability to turn pictures into actionable farming metrics.
 
 | Metric | Calculation Method | Practical Value |
 | :--- | :--- | :--- |
@@ -115,8 +115,8 @@ To run this project on your own machine, follow these setup instructions. (Requi
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Anahit-Israelyan/agrivision-dashboard.git
-cd agrivision-dashboard
+git clone https://github.com/Anahit-Israelyan/CropSense-dashboard.git
+cd CropSense-dashboard
 ```
 
 ### 2. Environment Setup
@@ -148,7 +148,7 @@ streamlit run app.py
 
 ## Future Roadmap
 
-Looking ahead, we plan to expand the AgriVision platform in several key areas:
+Looking ahead, we plan to expand the CropSense platform in several key areas:
 1. **Multi-Spectral Analysis:** Adding support for NDVI data to directly measure chlorophyll density and biological crop health.
 2. **Disease Identification:** Training the model to recognize distinct phenotypic disease markers (such as wheat rust).
 3. **API Detachment:** Rebuilding the inference engine as a standalone FastAPI service to allow mobile apps and IoT devices to utilize the model remotely.
@@ -160,11 +160,11 @@ Looking ahead, we plan to expand the AgriVision platform in several key areas:
 If you use this work in your research, please cite:
 
 ```bibtex
-@misc{israelyan2026agrivision,
-  title        = {AgriVision: Computer Vision Strategies for Wheat Head Detection},
+@misc{israelyan2026CropSense,
+  title        = {CropSense: Computer Vision Strategies for Wheat Head Detection},
   author       = {Israelyan, Anahit},
   year         = {2026},
-  howpublished = {\url{https://github.com/Anahit-Israelyan/agrivision-dashboard}}
+  howpublished = {\url{https://github.com/Anahit-Israelyan/CropSense-dashboard}}
 }
 ```
 

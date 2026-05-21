@@ -1,5 +1,5 @@
 """
-analytics.py — AgriVision Decision Support System
+analytics.py — CropSense Decision Support System
 ===================================================
 Statistical analysis engine for field-level wheat head count data.
 Provides Coefficient of Variation, yield estimation, and field health

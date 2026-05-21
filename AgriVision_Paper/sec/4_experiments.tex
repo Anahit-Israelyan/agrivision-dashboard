@@ -83,7 +83,7 @@ To eliminate these vulnerabilities, we rejected blind hyperparameter searching a
 \texttt{workers} & 8 & \textbf{2} & --75\% & \textbf{Hardware Limits.} Constrains threads to match physical CPU cores. \\ \bottomrule
 \end{tabular}%
 }
-\end{table}
+\end{table*}
 
 \textbf{Overcoming Spatial Annihilation:} 
 The most critical adjustment was pushing the input resolution to 1024px to combat small-object degradation. A $418\text{ px}^2$ object at $1024\text{px}$ input survives the stride-32 bottleneck with a final footprint of $\approx 0.41\text{ px}^2$. Even the smallest previously undetected objects now maintain enough spatial geometry for the network to extract accurate convolutions. Because higher resolutions quadratically increase memory consumption, we utilized Automatic Mixed Precision (AMP) and AutoBatch, which reduced the batch size to 6. This effectively traded memory limits for stochastic gradient noise, which acted as an excellent regularizer.
