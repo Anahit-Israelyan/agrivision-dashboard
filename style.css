@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* 1. Global Backgrounds and Typography */
+html, body, [class*="css"] {
+    font-family: 'Outfit', sans-serif !important;
+}
+
+[data-testid="stAppViewContainer"] {
+    background-color: #022c22; /* Emerald 900 */
+    background-image: radial-gradient(circle at top right, #064e3b 0%, transparent 40%),
+                      radial-gradient(circle at bottom left, #065f46 0%, transparent 30%);
+    color: #ecfdf5; /* Emerald 50 */
+}
+
+/* Hide Streamlit Top Header */
+[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+/* Sidebar Styling */
+[data-testid="stSidebar"] {
+    background-color: rgba(2, 44, 34, 0.6);
+    backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* Override Streamlit's default padding */
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 95%;
+}
+
+/* 2. Top Hero Banner */
+.hero-banner {
+    background: rgba(6, 78, 59, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(52, 211, 153, 0.3);
+    border-radius: 12px;
+    padding: 25px 35px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+.hero-banner:hover {
+    transform: translateY(-2px);
+    border-color: rgba(52, 211, 153, 0.5);
+}
+.hero-icon {
+    font-size: 45px;
+    margin-right: 20px;
+    text-shadow: 0 0 15px rgba(52, 211, 153, 0.6);
+}
+.hero-text-container {
+    display: flex;
+    flex-direction: column;
+}
+.hero-title {
+    color: #ffffff;
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+.hero-subtitle {
+    color: #6ee7b7; /* Emerald 300 */
+    margin: 5px 0 0 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* 3. Panel Styling */
+.panel-header {
+    color: #a7f3d0; /* Emerald 200 */
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.panel-container {
+    background: rgba(6, 78, 59, 0.2);
+    border: 1px solid rgba(52, 211, 153, 0.15);
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(52, 211, 153, 0.2);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.sidebar-header-icon {
+    font-size: 22px;
+    margin-right: 10px;
+}
+.sidebar-header-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ecfdf5;
+    letter-spacing: 1px;
+}
+
+.arch-text {
+    color: #6ee7b7;
+    font-size: 13px;
+    margin: 4px 0;
+    opacity: 0.8;
+}
+
+/* 4. Streamlit Action Button (Run Biomass Analysis) */
+div.stButton > button[kind="primary"] {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    border: 1px solid #10b981;
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 12px 0;
+    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.4);
+    transition: all 0.3s ease;
+}
+div.stButton > button[kind="primary"]:hover {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-color: #34d399;
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.6);
+    transform: translateY(-1px);
+}
+
+/* 5. Giant Glowing Stat Box */
+.stat-box-container {
+    background: rgba(6, 78, 59, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(52, 211, 153, 0.3);
+    border-radius: 12px;
+    padding: 35px 20px;
+    text-align: center;
+    margin-top: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3), inset 0 0 20px rgba(16, 185, 129, 0.1);
+    animation: fadeIn 0.6s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.stat-number {
+    font-size: 64px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(52, 211, 153, 0.5);
+}
+.stat-label {
+    font-size: 13px;
+    color: #6ee7b7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 12px;
+    font-weight: 600;
+}
+.stat-glow-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #34d399, transparent);
+    margin: 25px 0 20px 0;
+    box-shadow: 0 0 10px #34d399;
+}
+.stat-success {
+    color: #a7f3d0;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* 6. Image Containers */
+.img-placeholder {
+    height: 300px;
+    background-color: rgba(2, 44, 34, 0.5);
+    border: 1px dashed rgba(52, 211, 153, 0.3);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #059669;
+    font-weight: 500;
+}
