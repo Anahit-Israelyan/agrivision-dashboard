@@ -16,8 +16,8 @@
 
 | Resource | Description | Action |
 | :--- | :--- | :--- |
-| **Production Inference Engine** | Live YOLOv8 pipeline hosted on Hugging Face Space. | [**Run Live Demo**](https://huggingface.co/spaces/Anahit-Israelyan/CropSense-Engine) |
-| **Research Foundations** | Comprehensive study and model breakdown. | [**Read Research Paper**](https://github.com/Anahit-Israelyan/CropSense-dashboard/blob/main/CropSense_Paper/CropSense_CVPR_Draft.pdf) |
+| **Production Inference Engine** | Local Streamlit dashboard. | Run `streamlit run app.py` |
+| **Research Foundations** | Comprehensive study and model breakdown. | [**Read Research Paper**](https://github.com/Anahit-Israelyan/agrivision-dashboard/blob/main/CropSense_Paper/CropSense_Paper.pdf) |
 
 ---
 
@@ -115,8 +115,8 @@ To run this project on your own machine, follow these setup instructions. (Requi
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Anahit-Israelyan/CropSense-dashboard.git
-cd CropSense-dashboard
+git clone https://github.com/Anahit-Israelyan/agrivision-dashboard.git
+cd agrivision-dashboard
 ```
 
 ### 2. Environment Setup
@@ -164,7 +164,7 @@ If you use this work in your research, please cite:
   title        = {CropSense: Computer Vision Strategies for Wheat Head Detection},
   author       = {Israelyan, Anahit},
   year         = {2026},
-  howpublished = {\url{https://github.com/Anahit-Israelyan/CropSense-dashboard}}
+  howpublished = {\url{https://github.com/Anahit-Israelyan/agrivision-dashboard}}
 }
 ```
 
